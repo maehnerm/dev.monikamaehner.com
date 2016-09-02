@@ -1,1 +1,19 @@
 // Non-modular or client styles for .l-header region.
+.l-header{
+  height: 80vh;
+
+  .banner-background{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top:200px;
+    left:0;
+    background: {
+      image: url('http://www.freundevonfreunden.com/wp-content/uploads/manuela-sosa/Freunde-von-Freunden-Manuela-Sosa-9387-930x619.jpg');
+      size: cover;
+      position: right bottom, left top;
+      repeat: no-repeat;
+    }
+  }
+
+}
