@@ -187,3 +187,9 @@ AddEncoding gzip svgz
   # Disable Proxy header, since it's an attack vector.
   RequestHeader unset Proxy
 </IfModule>
+
+#Access
+AuthType Basic
+AuthName "Passwortgesch&uuml;tzter Bereich"
+AuthUserFile /kunden/homepages/39/d173331997/htdocs/new_website/.htpasswd
+require user maehner
