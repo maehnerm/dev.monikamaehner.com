@@ -55,6 +55,8 @@
  */
 #}
 
+{% set main_grid = 'large-9 large-centered' %}
+
 <div class="off-canvas-wrapper">
   <div class="inner-wrap off-canvas-wrapper-inner" id="inner-wrap" data-off-canvas-wrapper>
     <aside id="left-off-canvas-menu" class="off-canvas left-off-canvas-menu position-left" role="complementary" data-off-canvas>
@@ -78,34 +80,26 @@
         {% endif %}
       {% endif %}
 
-      <header class="row" role="banner" aria-label="{{ 'Site header'|t }}">
-        {% if linked_site_name or linked_logo %}
-          <div class="large-2 columns">
-            {% if linked_logo %}
-              {{ linked_logo }}
-            {% endif %}
-          </div>
-          <div class="left large-4 columns">
-            {% if is_front %}
-              <h1 id="site-name">{{ linked_site_name }}</h1>
-            {% else %}
-              <div id="site-name">{{ linked_site_name }}</div>
-            {% endif %}
-          </div>
-        {% endif %}
-      </header>
-
       {% if page.header %}
-        <div class="row">
-          <div class="large-12 columns">
-            {{ page.header }}
+        <div class="main-header">
+          <div class="row">
+            <div class="site-logo columns">
+              {% if linked_logo %}
+                {{ linked_logo }}
+              {% endif %}
+            </div>
+            <div class="medium-8 columns">
+              {{ page.header }}
+            </div>
           </div>
         </div>
       {% endif %}
 
       {% if is_front %}
-        <div class="l-header">
-          <div class="banner-background"></div>
+        <div class="row">
+          <div class="l-header">
+            <div class="banner-background"></div>
+          </div>
         </div>
       {% endif %}
 
