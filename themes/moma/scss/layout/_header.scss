@@ -1,12 +1,11 @@
 // Non-modular or client styles for .l-header region.
 .l-header{
-  height: 80vh;
 
   .banner-background{
     width: 100%;
     height: auto;
     min-height: 500px;
-    margin-top: 4em;
+    margin-top: 0;
     background: {
       image: url('http://www.freundevonfreunden.com/wp-content/uploads/manuela-sosa/Freunde-von-Freunden-Manuela-Sosa-9387-930x619.jpg');
       size: cover;

@@ -4062,17 +4062,15 @@ label {
   text-transform: uppercase;
   letter-spacing: 0.1em; }
 
-.l-header {
-  height: 80vh; }
-  .l-header .banner-background {
-    width: 100%;
-    height: auto;
-    min-height: 500px;
-    margin-top: 4em;
-    background-image: url("http://www.freundevonfreunden.com/wp-content/uploads/manuela-sosa/Freunde-von-Freunden-Manuela-Sosa-9387-930x619.jpg");
-    background-size: cover;
-    background-position: right bottom, left top;
-    background-repeat: no-repeat; }
+.l-header .banner-background {
+  width: 100%;
+  height: auto;
+  min-height: 500px;
+  margin-top: 0;
+  background-image: url("http://www.freundevonfreunden.com/wp-content/uploads/manuela-sosa/Freunde-von-Freunden-Manuela-Sosa-9387-930x619.jpg");
+  background-size: cover;
+  background-position: right bottom, left top;
+  background-repeat: no-repeat; }
 
 .site-logo {
   max-width: 250px; }
