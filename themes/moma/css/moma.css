@@ -4052,10 +4052,12 @@ h4, h5, h6 {
   text-transform: uppercase;
   letter-spacing: 0.1em; }
 
-nav a {
-  font-family: "PT Sans", Arial, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.1em; }
+nav {
+  display: inline; }
+  nav a {
+    font-family: "PT Sans", Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em; }
 
 label {
   font-family: "PT Sans", Arial, sans-serif;
