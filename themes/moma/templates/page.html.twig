@@ -96,11 +96,16 @@
       </header>
 
       {% if page.header %}
-        <div class="row l-header">
+        <div class="row">
           <div class="large-12 columns">
-            <div class="banner-background"></div>
             {{ page.header }}
           </div>
+        </div>
+      {% endif %}
+
+      {% if is_front %}
+        <div class="l-header">
+          <div class="banner-background"></div>
         </div>
       {% endif %}
 
