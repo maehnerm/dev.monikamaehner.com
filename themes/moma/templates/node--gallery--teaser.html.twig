@@ -90,7 +90,7 @@
   {# We hide the comments and links now so that we can render them later. #}
   <div{{ content_attributes }}>
     <div class="img-responsive">
-      {{ content.field_image }}
+      {{ content.field_image[0] }}
     </div>
     {{ content|without('comment', 'links', 'field_tags','field_image') }}
   </div>

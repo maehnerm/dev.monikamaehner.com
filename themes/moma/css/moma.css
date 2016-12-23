@@ -4057,6 +4057,13 @@ nav a {
   text-transform: uppercase;
   letter-spacing: 0.1em; }
 
+a {
+  color: #714610; }
+  a:focus {
+    color: #714610; }
+  a:active, a:hover {
+    color: #9c6217; }
+
 label {
   font-family: "PT Sans", Arial, sans-serif;
   text-transform: uppercase;
@@ -4067,10 +4074,11 @@ label {
   height: auto;
   min-height: 500px;
   margin-top: 0;
-  background-image: url("http://www.freundevonfreunden.com/wp-content/uploads/manuela-sosa/Freunde-von-Freunden-Manuela-Sosa-9387-930x619.jpg");
   background-size: cover;
-  background-position: right bottom, left top;
+  background-position: center;
   background-repeat: no-repeat; }
+  .l-header .banner-background.parallax {
+    background-attachment: fixed; }
 
 .site-logo {
   max-width: 250px; }
@@ -4081,6 +4089,9 @@ label {
   z-index: 2;
   background-color: rgba(255, 255, 255, 0.97);
   box-shadow: 0px 2px 15px rgba(150, 150, 150, 0.75); }
+
+#main {
+  padding-top: 70px; }
 
 .menu {
   margin-left: auto;

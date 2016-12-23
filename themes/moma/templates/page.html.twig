@@ -95,11 +95,16 @@
         </div>
       {% endif %}
 
-      {% if is_front %}
+      {% if node.field_banner_image or is_front %}
         <div class="l-header">
-          <div class="banner-background"></div>
+          {% if is_front %}
+              <div class="banner-background parallax" style="background-image:url('/monikamaehner.com/themes/moma/images/banner_strauss.jpg');" ></div>
+              {% else %}
+              <div class="banner-background parallax" style="background-image:url({{file_url(node.field_banner_image.entity.uri.value)}});" ></div>
+          {% endif %}
         </div>
       {% endif %}
+
 
       <div class="row">
         {% if show_account_info %}

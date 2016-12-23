@@ -7,11 +7,14 @@
     min-height: 500px;
     margin-top: 0;
     background: {
-      image: url('http://www.freundevonfreunden.com/wp-content/uploads/manuela-sosa/Freunde-von-Freunden-Manuela-Sosa-9387-930x619.jpg');
       size: cover;
-      position: right bottom, left top;
+      position: center;
       repeat: no-repeat;
     }
+    &.parallax{
+      background-attachment: fixed;
+    }
+
   }
 
 }
