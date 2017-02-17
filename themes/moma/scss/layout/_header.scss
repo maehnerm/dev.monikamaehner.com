@@ -13,14 +13,12 @@
   box-shadow: 0px 2px 15px rgba(150,150,150,0.75);
 }
 
-.intro-content{
+.field-block-content--body{
   text-align: center;
-  padding-top: 3em;
-  padding-bottom: 3em;
+}
 
-  .short-line{
-    width: 80px;
-    border: 1px solid rgba(10,10,10,0.5);
-    margin: 3rem auto;
-  }
+.short-line{
+  width: 80px;
+  border: 1px solid rgba(10,10,10,0.5);
+  margin: 3rem auto 3.7rem;
 }

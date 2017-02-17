@@ -67,13 +67,13 @@
  * @ingroup themeable
  */
 #}
-<article id="node-{{ node.id }}" {{ attributes }}>
+<article id="node-{{ node.id }}" {{ attributes.addClass('text-center') }}>
 
   {{ title_prefix }}
   {% if not page %}
-    <h2{{ title_attributes }}>
+    <h1{{ title_attributes }}>
       <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
+    </h1>
   {% endif %}
   {{ title_suffix }}
 
@@ -86,14 +86,15 @@
       </div>
     </div>
   {% endif %}
-
   {# We hide the comments and links now so that we can render them later. #}
-  <div{{ content_attributes }}>
+  <div{{ content_attributes.addClass('text-center') }}>
     {{ content|without('comment', 'links', 'field_tags','field_thumbnail') }}
   </div>
+  {% if content.field_thumbnail %}
   <div class="l-banner">
     {{ content.field_thumbnail }}
   </div>
+  {% endif %}
 
   {% if content.field_tags|length and not is_front %}
     {{ content.field_tags }}

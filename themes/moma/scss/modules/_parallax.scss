@@ -1,18 +1,48 @@
 .l-banner{
+  position: relative;
   width: 100%;
+  @include breakpoint(small) {
+    // Medium and up styles
+    height: 320px;
+    min-height: 320px;
+  }
+  @include breakpoint(large) {
+    // Large and up styles
+    height : 600px;
+    min-height : 600px;
+  }
+  @include breakpoint(xlarge) {
+    // Large and up styles
+    height : 700px;
+    min-height : 700px;
+  }
+  overflow: hidden;
   .l-banner__background{
-    //width: 100%;
+    width: auto;
     height: auto;
-    min-height: 500px;
-    margin-top: 0;
+    min-height: inherit;
+    //margin-top: 0;
     background: {
-      size: cover;
+      size: 100% auto;
       position: center;
       repeat: no-repeat;
     }
-    // &.parallax{
-    //   background-attachment: fixed;
-    // }
+    &.parallax{
+      position: absolute;
+      @include breakpoint(small){
+        position: relative;
+      }
+      @include breakpoint(medium){
+        position: absolute;
+      }
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: {
+        position: center top;
+      }
+    }
 
   }
 

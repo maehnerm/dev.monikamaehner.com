@@ -14,23 +14,24 @@
     }
   };
 
+  var parallax = document.querySelectorAll(".parallax"),
+      speed = -0.1;
+
+  $(window).on("scroll resize load",function(){
+      [].slice.call(parallax).forEach(function(el,i){
+
+        var windowYOffset = window.pageYOffset,
+            elBackgrounPos = "center " + (windowYOffset * speed) + "px";
+        if( window.innerWidth > 640 ){
+          el.style.backgroundPosition = elBackgrounPos;
+        }
+
+      });
+  });
+
 })(jQuery, Drupal);
 
 (function(){
-
-  var parallax = document.querySelectorAll(".parallax"),
-      speed = 0.3;
-
-  window.onscroll = function(){
-    [].slice.call(parallax).forEach(function(el,i){
-
-      var windowYOffset = window.pageYOffset,
-          elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
-
-      el.style.backgroundPosition = elBackgrounPos;
-
-    });
-  };
 
 })();
 

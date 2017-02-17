@@ -6,6 +6,16 @@
   margin: 40px auto;
 }
 
+@for $i from 1 through 4 {
+  @each $margin in top, left, bottom, right {
+
+    .margin-#{$margin}-#{$i}{
+      @include margin($margin, 1rem * $i )
+    }
+
+  }
+}
+
 .container {
   max-width: 960px;
   margin: 0 auto;
@@ -43,4 +53,9 @@ img.logo{
   background-color: rgba(255,255,255,0.9);
   padding: 5px;
 
+}
+.block-views-block-galerie-block-1{
+  .node-title {
+    height: 2.5em;
+  }
 }

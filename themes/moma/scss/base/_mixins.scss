@@ -6,3 +6,7 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
+
+@mixin margin($margin, $value){
+  margin-#{$margin}: $value;
+}

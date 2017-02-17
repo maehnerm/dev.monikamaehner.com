@@ -43,7 +43,7 @@
  */
 #}
 {% if block.delta != 'main' and content  %}
-<section{{ attributes }}>
+<section{{ attributes.addClass('margin-top-4') }}>
   {% endif %}
 
   {{ title_prefix }}
@@ -53,7 +53,7 @@
   {{ title_suffix }}
 
   {% if content_attributes|length %}
-  <div {{ content_attributes }}>
+  <div {{ content_attributes.addClass('margin-top-1') }}>
     {% endif %}
 
     {% block content %}

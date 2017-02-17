@@ -55,7 +55,7 @@
  */
 #}
 
-{% set main_grid = 'large-9 large-centered' %}
+{% set main_grid = 'large-9 large-centered margin-top-3 margin-bottom-3' %}
 
 <div class="off-canvas-wrapper">
   <div class="inner-wrap off-canvas-wrapper-inner" id="inner-wrap" data-off-canvas-wrapper>
@@ -158,8 +158,8 @@
         {% if breadcrumb %} {{ breadcrumb }} {% endif %}
 
         <div class="row">
-          <section class="intro-content {{ main_grid }} columns" >
-            {{ page.content }}
+          <section class="{{ main_grid }} columns" >
+            {{ page.content}}
           </section>
         </div>
 

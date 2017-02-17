@@ -68,29 +68,21 @@
  */
 #}
 <article id="node-{{ node.id }}" {{ attributes }}>
+  {% if display_submitted %}
+    <div class="posted">
+      {{ author_picture }}
+      <div{{ author_attributes }}>
+        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        {{ metadata }}
+      </div>
+    </div>
+  {% endif %}
 
   {# We hide the comments and links now so that we can render them later. #}
   <div{{ content_attributes }}>
-
-    {% if content.field_thumbnail %}
     <div class="img-responsive">
-      {{ content.field_thumbnail }}
+      {{ content.field_image[0] }}
     </div>
-    {% elseif content.field_image['0'] %}
-    <div class="img-responsive">
-      {{ content.field_image['0'] }}
-    </div>
-    {% endif %}
-
-    {% if display_submitted %}
-      <div class="posted">
-        {{ author_picture }}
-        <div{{ author_attributes }}>
-          {{ date }}
-          {{ metadata }}
-        </div>
-      </div>
-    {% endif %}
     {{ title_prefix }}
     {% if not page %}
       <h4{{ title_attributes }}>
@@ -98,7 +90,7 @@
       </h4>
     {% endif %}
     {{ title_suffix }}
-    {{ content|without('comment', 'links', 'field_tags','field_image','field_thumbnail') }}
+    {{ content|without('comment', 'links', 'field_tags','field_image') }}
   </div>
 
   {% if content.field_tags|length and not is_front %}
