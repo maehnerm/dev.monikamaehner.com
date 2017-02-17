@@ -5,3 +5,12 @@
 // %font-FONTNAME   {}
 // %font-sans-serif { font-family: sans-serif; }
 // %font-serif      { font-family: serif; }
+
+.vertical-center-wrapper{
+  display: table;
+  width: 100%;
+  .vertical-center-content{
+    display: table-cell;
+    vertical-align: middle;
+  }
+}

@@ -69,15 +69,17 @@
 
     <div class="off-canvas-content" data-off-canvas-content>
       {% if page.meta_header %}
+
         {% if meta_header_grid %}
           <div class="row">
             <div class="large-12 columns">
-        {% endif %}
-        {{ page.meta_header }}
-        {% if meta_header_grid %}
+              {{ page.meta_header }}
             </div>
           </div>
+        {% else %}
+          {{ page.meta_header }}
         {% endif %}
+
       {% endif %}
 
       {% if page.header %}
@@ -95,17 +97,6 @@
         </div>
       {% endif %}
 
-      {% if node.field_banner_image or is_front %}
-        <div class="l-header">
-          {% if is_front %}
-              <div class="banner-background parallax" style="background-image:url('/monikamaehner.com/themes/moma/images/banner_strauss.jpg');" ></div>
-              {% else %}
-              <div class="banner-background parallax" style="background-image:url({{file_url(node.field_banner_image.entity.uri.value)}});" ></div>
-          {% endif %}
-        </div>
-      {% endif %}
-
-
       <div class="row">
         {% if show_account_info %}
           <div class="{{ site_slogan ? 'large-6' : 'large-4 columns large-offset-8' }} columns hide-for-small">
@@ -122,7 +113,7 @@
         {% endif %}
         {% if site_slogan %}
           <div class="large-6 columns hide-for-small">
-            {{ site_slogan }}
+            <h1>{{ site_slogan }}</h1>
           </div>
         {% endif %}
         {% if show_account_info %}
@@ -157,30 +148,52 @@
       </div>
       {% endif %}
 
-      <div class="row">
-        <main id="main" class="{{ main_grid }} columns" role="main">
-          {% if page.highlighted %}
-            {% spaceless %}
-              {{ page.highlighted }}
-            {% endspaceless %}
-          {% endif %}
-          <a id="main-content"></a>
-          {% if breadcrumb %} {{ breadcrumb }} {% endif %}
-          <section>
+      <main id="main" role="main">
+        {% if page.highlighted %}
+          {% spaceless %}
+            {{ page.highlighted }}
+          {% endspaceless %}
+        {% endif %}
+        <a id="main-content"></a>
+        {% if breadcrumb %} {{ breadcrumb }} {% endif %}
+
+        <div class="row">
+          <section class="intro-content {{ main_grid }} columns" >
             {{ page.content }}
           </section>
-        </main>
-        {% if page.sidebar_first %}
-          <div id="sidebar-first" class="{{ sidebar_first_grid }} columns sidebar ">
-            {{ page.sidebar_first }}
-          </div>
+        </div>
+
+
+        {% if is_front %}
+        <div class="l-banner">
+            <div class="l-banner__background parallax" style="background-image:url('/monikamaehner.com/themes/moma/images/banner_strauss.jpg');" ></div>
+        </div>
+        {% else %}
+        <div class="l-banner">
+            <div class="l-banner__background parallax" style="background-image:url({{file_url(node.field_thumbnail.entity.uri.value)}});" ></div>
+        </div>
         {% endif %}
-        {% if page.sidebar_second %}
-          <div id="sidebar-second" class="{{ sidebar_sec_grid }} columns sidebar">
-            {{ page.sidebar_second }}
-          </div>
+
+        {% if page.after_parallax %}
+        <div class="row">
+          <section class="{{ main_grid }} columns">
+            {{ page.after_parallax }}
+          </section>
+        </div>
         {% endif %}
-      </div>
+
+      </main>
+      {% if page.sidebar_first %}
+        <div id="sidebar-first" class="{{ sidebar_first_grid }} columns sidebar ">
+          {{ page.sidebar_first }}
+        </div>
+      {% endif %}
+      {% if page.sidebar_second %}
+        <div id="sidebar-second" class="{{ sidebar_sec_grid }} columns sidebar">
+          {{ page.sidebar_second }}
+        </div>
+      {% endif %}
+
       {% if page.footer_first or page.footer_middle or page.footer_last %}
         <footer class="row">
           {% if page.footer_first %}

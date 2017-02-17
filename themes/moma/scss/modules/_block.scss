@@ -1,3 +1,46 @@
 .content{
   background-color: rgba(255, 255, 255, 0.8);
 }
+
+.mtb-40{
+  margin: 40px auto;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.module{
+  width: 100%;
+  height: auto;
+  min-height: 500px;
+  margin-top: 0;
+  background: {
+    size: cover;
+    position: center;
+    repeat: no-repeat;
+  }
+}
+
+.module.content {
+  padding: 40px 0;
+}
+.module.parallax {
+  padding: 240px 0;
+  background-position: 0 0;
+}
+
+img.logo{
+  min-height: 10px;
+}
+
+.posted{
+  font-size: xx-small;
+  position: absolute;
+  margin-top: -23px;
+  width: 100%;
+  background-color: rgba(255,255,255,0.9);
+  padding: 5px;
+
+}

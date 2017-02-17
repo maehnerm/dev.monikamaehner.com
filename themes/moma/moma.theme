@@ -42,3 +42,7 @@ function moma_preprocess_page(&$variables) {
  * Implements template_preprocess_views_view().
  */
 function moma_preprocess_views_view(&$variables) {}
+
+function moma_preprocess_taxonomy_term(&$variables) {
+  $variables['view_mode'] = $variables['elements']['#view_mode'];
+}

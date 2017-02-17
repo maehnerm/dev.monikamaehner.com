@@ -1,0 +1,19 @@
+.l-banner{
+  width: 100%;
+  .l-banner__background{
+    //width: 100%;
+    height: auto;
+    min-height: 500px;
+    margin-top: 0;
+    background: {
+      size: cover;
+      position: center;
+      repeat: no-repeat;
+    }
+    // &.parallax{
+    //   background-attachment: fixed;
+    // }
+
+  }
+
+}

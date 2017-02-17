@@ -10,6 +10,8 @@
  h1, h2, h3,
  h4, h5, h6 {
    @include uppercase-sans-serif;
+   margin-top: 0.8rem;
+   margin-bottom: 0rem;
  }
 
  nav{
@@ -30,6 +32,11 @@ a {
   &:active,&:hover{
     color: #9c6217;
   }
+}
+
+img{
+  width: 100%;
+  min-height: 130px;
 }
 
 // a:focus {}
