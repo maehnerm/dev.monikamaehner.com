@@ -91,23 +91,18 @@ select{
   -moz-appearance: none;
   appearance: none;
   border: 0;
-  margin: 0 auto;
-  display: block;
-  width: 600px;
+  display: inline-block;
+  max-width: 300px;
   padding: 0;
   option {
-    display: inline;
-    text-align: center;
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding: 0.5rem;
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 1.1rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    -webkit-border-right: 2px solid #666666;
-    -moz-border-right: 2px solid #666666;
-    -ms-border-right: 2px solid #666666;
-    border-right: 2px solid #666666;
+    &:before{
+      content: '+ ';
+    }
     background-color: #ffffff;
     &:last-child{
       -webkit-border-right: 0;
@@ -115,9 +110,9 @@ select{
       -ms-border-right: 0;
       border-right: 0;
     }
-    &[selected]{
+    &[selected],
+    :checked{
       background: 0;
-      text-decoration: underline;
     }
 
   }

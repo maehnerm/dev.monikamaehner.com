@@ -1,7 +1,7 @@
 <?php
 
-/* themes/moma/templates/select.html.twig */
-class __TwigTemplate_be8b127924c991d3a29c982454d105322419728c2fe023333af4d3041f7901d4 extends Twig_Template
+/* core/themes/classy/templates/form/select.html.twig */
+class __TwigTemplate_1f0ae7f6111df3c172395d594c7244059e86234ca29e138c58b3799a3fc43d55 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -67,9 +67,9 @@ class __TwigTemplate_be8b127924c991d3a29c982454d105322419728c2fe023333af4d3041f7
                     echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute($context["sub_option"], "value", array()), "html", null, true));
                     echo "\"";
                     echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->renderVar((($this->getAttribute($context["sub_option"], "selected", array())) ? (" selected=\"selected\"") : (""))));
-                    echo "><span class=\"option--underline\">";
+                    echo ">";
                     echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute($context["sub_option"], "label", array()), "html", null, true));
-                    echo "</span></option>
+                    echo "</option>
           ";
                 }
                 $_parent = $context['_parent'];
@@ -104,7 +104,7 @@ $context["option"], "type", array()) == "option")) {
 
     public function getTemplateName()
     {
-        return "themes/moma/templates/select.html.twig";
+        return "core/themes/classy/templates/form/select.html.twig";
     }
 
     public function isTraitable()
@@ -123,8 +123,8 @@ $context["option"], "type", array()) == "option")) {
 /*  * Theme override for a select element.*/
 /*  **/
 /*  * Available variables:*/
-/*  * - attributes: HTML attributes for the select tag.*/
-/*  * - options: The option element children.*/
+/*  * - attributes: HTML attributes for the <select> tag.*/
+/*  * - options: The <option> element children.*/
 /*  **/
 /*  * @see template_preprocess_select()*/
 /*  *//* */
@@ -135,7 +135,7 @@ $context["option"], "type", array()) == "option")) {
 /*       {% if option.type == 'optgroup' %}*/
 /*         <optgroup label="{{ option.label }}">*/
 /*           {% for sub_option in option.options %}*/
-/*             <option value="{{ sub_option.value }}"{{ sub_option.selected ? ' selected="selected"' }}><span class="option--underline">{{ sub_option.label }}</span></option>*/
+/*             <option value="{{ sub_option.value }}"{{ sub_option.selected ? ' selected="selected"' }}>{{ sub_option.label }}</option>*/
 /*           {% endfor %}*/
 /*         </optgroup>*/
 /*       {% elseif option.type == 'option' %}*/

@@ -1,7 +1,7 @@
 <?php
 
-/* core/themes/stable/templates/form/form.html.twig */
-class __TwigTemplate_bb40a2371a80aba3b4fcf6ce59be5b61605c0b11a0372e55976e5e0d13e2b187 extends Twig_Template
+/* core/themes/classy/templates/form/input.html.twig */
+class __TwigTemplate_e323d8d9530cc1561e1572802c50b7d729abeac03c325e679730c96830b3a7e9 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -40,20 +40,17 @@ class __TwigTemplate_bb40a2371a80aba3b4fcf6ce59be5b61605c0b11a0372e55976e5e0d13e
         }
 
         // line 13
-        echo "<form";
+        echo "<input";
         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, (isset($context["attributes"]) ? $context["attributes"] : null), "html", null, true));
-        echo ">
-  ";
-        // line 14
+        echo " />";
         echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, (isset($context["children"]) ? $context["children"] : null), "html", null, true));
         echo "
-</form>
 ";
     }
 
     public function getTemplateName()
     {
-        return "core/themes/stable/templates/form/form.html.twig";
+        return "core/themes/classy/templates/form/input.html.twig";
     }
 
     public function isTraitable()
@@ -63,22 +60,20 @@ class __TwigTemplate_bb40a2371a80aba3b4fcf6ce59be5b61605c0b11a0372e55976e5e0d13e
 
     public function getDebugInfo()
     {
-        return array (  48 => 14,  43 => 13,);
+        return array (  43 => 13,);
     }
 }
 /* {#*/
 /* /***/
 /*  * @file*/
-/*  * Theme override for a 'form' element.*/
+/*  * Theme override for an 'input' #type form element.*/
 /*  **/
-/*  * Available variables*/
-/*  * - attributes: A list of HTML attributes for the wrapper element.*/
-/*  * - children: The child elements of the form.*/
+/*  * Available variables:*/
+/*  * - attributes: A list of HTML attributes for the input element.*/
+/*  * - children: Optional additional rendered elements.*/
 /*  **/
-/*  * @see template_preprocess_form()*/
+/*  * @see template_preprocess_input()*/
 /*  *//* */
 /* #}*/
-/* <form{{ attributes }}>*/
-/*   {{ children }}*/
-/* </form>*/
+/* <input{{ attributes }} />{{ children }}*/
 /* */
