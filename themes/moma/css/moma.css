@@ -4420,7 +4420,8 @@ select {
       background: 0; }
 
 .site-logo {
-  max-width: 250px; }
+  max-width: 250px;
+  min-height: 51px; }
 
 .main-header {
   width: 100%;
@@ -4428,6 +4429,13 @@ select {
   z-index: 2;
   background-color: rgba(255, 255, 255, 0.97);
   box-shadow: 0px 2px 15px rgba(150, 150, 150, 0.75); }
+  @media screen and (min-width: 40em) {
+    .main-header #main-menu {
+      min-height: 51px; } }
+  .main-header .toggle-button {
+    position: absolute;
+    top: 1rem;
+    left: 1rem; }
 
 .field-block-content--body {
   text-align: center; }
@@ -4494,6 +4502,9 @@ select {
 .margin-right-4 {
   margin-right: 4rem; }
 
+.white-panel {
+  background-color: #ffffff; }
+
 .container {
   max-width: 960px;
   margin: 0 auto; }
@@ -4532,8 +4543,31 @@ img.logo {
   margin-left: auto;
   margin-right: auto; }
 
-.top-bar, .top-bar ul {
-  background-color: transparent; }
+.top-bar, .top-bar {
+  background-color: rgba(255, 255, 255, 0.97); }
+  .top-bar ul, .top-bar ul {
+    background-color: transparent; }
+  @media screen and (min-width: 40em) {
+    .top-bar, .top-bar {
+      background-color: transparent; } }
+
+.small-absolute {
+  position: absolute; }
+  @media screen and (min-width: 40em) {
+    .small-absolute {
+      position: relative; } }
+
+#responsive-menu {
+  height: 100vh;
+  width: 50%;
+  box-shadow: 0px 10px 15px rgba(150, 150, 150, 0.75);
+  transition-timing-function: ease-in;
+  transition-duration: 0.3s; }
+  @media screen and (min-width: 40em) {
+    #responsive-menu {
+      height: auto;
+      width: auto;
+      box-shadow: none; } }
 
 .l-banner {
   position: relative;

@@ -85,17 +85,27 @@
       {% if page.header %}
         <div class="main-header">
           <div class="row">
-            <div class="site-logo columns">
+            <div class="site-logo small-10 small-centered medium-5 medium-uncentered columns">
               {% if linked_logo %}
                 {{ linked_logo }}
               {% endif %}
             </div>
-            <div class="medium-8 columns">
-              {{ page.header }}
+            <div class="toggle-button">
+              <span data-toggle="responsive-menu" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+                <div class="menu-icon dark"></div>
+              </span>
             </div>
+            {{ page.header }}
           </div>
         </div>
       {% endif %}
+
+      <!-- <p><a data-toggle="panel">Toggle Panel</a></p>
+
+      <div class="callout" id="panel" data-toggler data-animate="hinge-in-from-top spin-out">
+        <h4>Hello!</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quas optio alias voluptas nobis iusto mollitia asperiores incidunt reprehenderit doloribus voluptatibus officiis minus, inventore, quasi nisi. Consequuntur, quidem. Sint, dicta?</p>
+      </div> -->
 
       <div class="row">
         {% if show_account_info %}
@@ -159,6 +169,9 @@
 
         <div class="row">
           <section class="{{ main_grid }} columns" >
+            <div class="small-10 small-centered medium-7 columns">{% if linked_logo and is_front %}
+                {{ linked_logo }}
+              {% endif %}</div>
             {{ page.content}}
           </section>
         </div>
@@ -196,30 +209,24 @@
 
       {% if page.footer_first or page.footer_middle or page.footer_last %}
         <footer class="row">
-          {% if page.footer_first %}
-            <div id="footer-first" class="large-4 columns">
-              {{ page.footer_first }}
-            </div>
-          {% endif %}
+          <div id="footer-first" class="large-6 columns">
+            {% if page.footer_first %}
+            {{ page.footer_first }}
+            {% endif %}
+          </div>
           {% if page.footer_middle %}
-            <div id="footer-middle" class="large-4 columns">
+            <div id="footer-middle" class="large-2 columns">
               {{ page.footer_middle }}
             </div>
           {% endif %}
-          {% if page.footer_last %}
-            <div id="footer-last" class="large-4 columns">
+          <div id="footer-last" class="large-4 columns">
+            {% if page.footer_last %}
               {{ page.footer_last }}
-            </div>
-          {% endif %}
+            {% endif %}
+            <span class="copyright">&copy; {{ "now"|date('Y') }} {{ site_name }} {{ 'All rights reserved.'|t }}</span>
+          </div>
         </footer>
       {% endif %}
-      <div class="bottom-bar panel">
-        <div class="row">
-          <div class="large-12 columns">
-          &copy; {{ "now"|date('Y') }} {{ site_name }} {{ 'All rights reserved.'|t }}
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </div>
